@@ -25,7 +25,7 @@ namespace LearningApp.Facade.API
             // This code tell to generate swagger doc
             services.AddSwaggerGen(g =>
             {
-                g.SwaggerDoc("Learning", 
+                g.SwaggerDoc("Learning",  // {SwaggerDocName}
                     new Microsoft.OpenApi.Models.OpenApiInfo() 
                     { 
                         Title = "Learning App",
@@ -92,7 +92,7 @@ namespace LearningApp.Facade.API
             app.UseSwagger();
             //Tells to use swagger UI
             app.UseSwaggerUI(a => {
-                a.SwaggerEndpoint("/swagger/Learning/swagger.json", "Learning app");
+                a.SwaggerEndpoint("/swagger/Learning/swagger.json", "Learning app"); // "/swagger/{SwaggerDocName}/swagger.json" 
                 a.RoutePrefix = string.Empty;
             });
 
