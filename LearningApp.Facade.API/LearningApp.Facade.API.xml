@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LearningApp.Facade.API</name>
+    </assembly>
+    <members>
+        <member name="T:LearningApp.Facade.API.Controllers.QuestionController">
+            <summary>
+            Question api
+            </summary>
+        </member>
+        <member name="M:LearningApp.Facade.API.Controllers.QuestionController.Get">
+            <summary>
+            Gets the list of all questions
+            </summary>
+            <returns>List of all question</returns>
+        </member>
+        <member name="M:LearningApp.Facade.API.Controllers.QuestionController.Get(System.Int32)">
+             <summary>
+             Get the question by Id
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "name": "Item1",
+                    "isComplete": true
+                 }
+             </remarks>
+             <param name="id"> Question Id </param>
+             <returns>Return the question</returns>
+             <response code="404">Question not found</response>
+        </member>
+    </members>
+</doc>
