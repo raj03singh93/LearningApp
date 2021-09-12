@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,10 @@ using System.Threading.Tasks;
 
 namespace LearningApp.Facade.API.Controllers
 {
+    /// <summary>
+    /// Question api
+    /// </summary>
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class QuestionController : ControllerBase
@@ -20,33 +25,45 @@ namespace LearningApp.Facade.API.Controllers
             this.logger = logger;
         }
 
-        // GET: api/<QuestionController>
+        /// <summary>
+        /// Gets the list of all questions
+        /// </summary>
+        /// <returns>List of all question</returns>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<QuestionController>/5
+        /// <summary>
+        /// Get the question by Id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST 
+        ///     {
+        ///        "id": 1
+        ///     }
+        /// </remarks>
+        /// <param name="id"> Question Id </param>
+        /// <returns>Return the question</returns>
+        /// <response code="404">Question not found</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<QuestionController>
+        
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<QuestionController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<QuestionController>/5
+        
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
