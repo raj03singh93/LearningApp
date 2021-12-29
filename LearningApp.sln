@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningApp.Facade.API", "LearningApp.Facade.API\LearningApp.Facade.API.csproj", "{0481A555-E84A-4F9E-8A7A-B456B92D23DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningApp.Facade.API", "LearningApp.Facade.API\LearningApp.Facade.API.csproj", "{0481A555-E84A-4F9E-8A7A-B456B92D23DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningApp.Service", "LearningApp.Service\LearningApp.Service.csproj", "{A24307A5-D36D-4FBD-8E82-B7FA9061446D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningApp.Service", "LearningApp.Service\LearningApp.Service.csproj", "{A24307A5-D36D-4FBD-8E82-B7FA9061446D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningApp.Data", "LearningApp.Data\LearningApp.Data.csproj", "{66C6E993-F5F9-4755-9468-F5258B29A3D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningApp.Data", "LearningApp.Data\LearningApp.Data.csproj", "{66C6E993-F5F9-4755-9468-F5258B29A3D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningApp.DTO", "LearningApp.DTO\LearningApp.DTO.csproj", "{3AFF26BD-576C-47D9-8661-D6521745F469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningApp.DTO", "LearningApp.DTO\LearningApp.DTO.csproj", "{3AFF26BD-576C-47D9-8661-D6521745F469}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3652B5EC-1643-40BC-8586-9751E513CE15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0481A555-E84A-4F9E-8A7A-B456B92D23DA} = {3652B5EC-1643-40BC-8586-9751E513CE15}
+		{A24307A5-D36D-4FBD-8E82-B7FA9061446D} = {3652B5EC-1643-40BC-8586-9751E513CE15}
+		{66C6E993-F5F9-4755-9468-F5258B29A3D5} = {3652B5EC-1643-40BC-8586-9751E513CE15}
+		{3AFF26BD-576C-47D9-8661-D6521745F469} = {3652B5EC-1643-40BC-8586-9751E513CE15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D8858BF-2AC4-4DBD-87F2-EF39DD4F4241}
