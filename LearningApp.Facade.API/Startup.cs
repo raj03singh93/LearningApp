@@ -99,11 +99,19 @@ namespace LearningApp.Facade.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(builder => { builder.AllowAnyOrigin(); builder.AllowAnyHeader(); builder.AllowAnyMethod(); });
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            app.Run(async (context) => 
+            {
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                await context.Response.WriteAsync("Unhandled path!");
             });
         }
     }
