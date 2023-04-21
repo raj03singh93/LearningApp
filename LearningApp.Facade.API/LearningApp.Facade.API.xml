@@ -4,6 +4,11 @@
         <name>LearningApp.Facade.API</name>
     </assembly>
     <members>
+        <member name="T:LearningApp.Facade.API.Controllers.AccountController">
+            <summary>
+            Account Controller.
+            </summary>
+        </member>
         <member name="T:LearningApp.Facade.API.Controllers.QuestionController">
             <summary>
             Question api
@@ -22,11 +27,9 @@
              <remarks>
              Sample request:
             
-                 POST /Todo
+                 POST 
                  {
-                    "id": 1,
-                    "name": "Item1",
-                    "isComplete": true
+                    "id": 1
                  }
              </remarks>
              <param name="id"> Question Id </param>

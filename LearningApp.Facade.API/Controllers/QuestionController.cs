@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LearningApp.Facade.API.Controllers.Base;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,10 +14,8 @@ namespace LearningApp.Facade.API.Controllers
     /// <summary>
     /// Question api
     /// </summary>
-    [Produces("application/json")]
-    [Route("api/[controller]")]
-    [ApiController]
-    public class QuestionController : ControllerBase
+    [Route("InterviewQuestion")]
+    public class QuestionController : BaseController
     {
         private readonly ILogger<QuestionController> logger;
 
